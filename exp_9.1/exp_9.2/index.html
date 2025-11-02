@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Dashboard — CI/CD Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>ProdDash</h1>
+        <p>CI/CD Demo</p>
+      </div>
+      <nav>
+        <button id="nav-home" class="nav-btn active">Products</button>
+        <button id="nav-stats" class="nav-btn">Stats</button>
+      </nav>
+
+      <div class="meta">
+        <small>Deploy status:</small>
+        <div id="deployBadge" class="badge">—</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <input id="search" placeholder="Search products..." />
+        <div class="controls">
+          <button id="refresh" class="btn">⟳ Refresh</button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="card form-card">
+          <h2>Add product</h2>
+          <form id="productForm">
+            <div class="row">
+              <input id="name" placeholder="Product name" required />
+              <input id="price" placeholder="Price" type="number" required />
+            </div>
+            <div class="row">
+              <input id="qty" placeholder="Quantity" type="number" required />
+              <button class="btn primary" type="submit">Add</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card table-card">
+          <h2>Products</h2>
+          <table id="table">
+            <thead>
+              <tr><th>#</th><th>Name</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <p id="empty" class="muted">No products yet — add one ✨</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Made with ❤ — Auto-deploy via GitHub Actions</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
