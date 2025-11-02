@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vanilla To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>📝 Simple To-Do</h1>
+
+    <form id="todoForm" class="input-row" autocomplete="off">
+      <input id="taskInput" name="task" type="text" placeholder="Add a new task..." required />
+      <button type="submit" id="addBtn">Add</button>
+    </form>
+
+    <section class="list-area">
+      <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+      <p id="emptyMsg" class="empty">No tasks yet — add one above.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
